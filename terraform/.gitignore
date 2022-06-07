@@ -1,0 +1,9 @@
+*tfstate*
+*.plan
+.env
+.terraform
+.DS_Store
+wip*.*
+*.json
+*.tfvars
+!example.tfvars
