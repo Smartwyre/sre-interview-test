@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Each folder will have it's own instructions on what you need to do achieve.
+Each folder will have its own instructions on what you need to achieve.
 
 Please upload your answer to GitHub in your own project and send the link via email
 
