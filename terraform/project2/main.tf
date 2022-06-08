@@ -19,12 +19,12 @@ resource "random_id" "suffix" {
 
 # dev resources
 resource "azurerm_resource_group" "example" {
-  name     = "rg-tf-proj2-dev"
+  name     = "rg-p2-de-${lower(random_id.suffix.hex)}" # name: azure resource type (2 chars)-project1 (2 chars)-environment (2 char)-suffix
   location = "centralus"
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "stp2d${lower(random_id.suffix.hex)}"
+  name                     = "stp2de${lower(random_id.suffix.hex)}" # name: azure resource type (2 chars)-project1 (2 chars)-environment (2 char)-suffix
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"

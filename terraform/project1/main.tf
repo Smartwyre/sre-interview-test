@@ -19,12 +19,12 @@ resource "random_id" "suffix" {
 
 # dev resources
 resource "azurerm_resource_group" "dev" {
-  name     = "rg-tf-proj1-dev"
+  name     = "rg-p1-de-${lower(random_id.suffix.hex)}" # name: azure resource type (2 chars)-project1 (2 chars)-environment (2 char)-suffix
   location = "centralus"
 }
 
 resource "azurerm_storage_account" "dev" {
-  name                     = "stp1d${lower(random_id.suffix.hex)}"
+  name                     = "stp1de${lower(random_id.suffix.hex)}" # name: azure resource type (2 chars)-project1 (2 chars)-environment (2 char)-suffix
   resource_group_name      = azurerm_resource_group.dev.name
   location                 = azurerm_resource_group.dev.location
   account_tier             = "Standard"
@@ -33,12 +33,12 @@ resource "azurerm_storage_account" "dev" {
 
 # staging resources
 resource "azurerm_resource_group" "staging" {
-  name     = "rg-tf-proj1-staging"
+  name     = "rg-p1-st-${lower(random_id.suffix.hex)}"
   location = "centralus"
 }
 
 resource "azurerm_storage_account" "staging" {
-  name                     = "stp1s${lower(random_id.suffix.hex)}"
+  name                     = "stp1st${lower(random_id.suffix.hex)}"
   resource_group_name      = azurerm_resource_group.staging.name
   location                 = azurerm_resource_group.staging.location
   account_tier             = "Standard"
@@ -47,12 +47,12 @@ resource "azurerm_storage_account" "staging" {
 
 # prod resources
 resource "azurerm_resource_group" "prod" {
-  name     = "rg-tf-proj1-prod"
+  name     = "rg-p1-pr-${lower(random_id.suffix.hex)}"
   location = "centralus"
 }
 
 resource "azurerm_storage_account" "prod" {
-  name                     = "stp1p${lower(random_id.suffix.hex)}"
+  name                     = "stp1pr${lower(random_id.suffix.hex)}"
   resource_group_name      = azurerm_resource_group.prod.name
   location                 = azurerm_resource_group.prod.location
   account_tier             = "Standard"
