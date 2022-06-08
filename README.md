@@ -1,6 +1,6 @@
 # SRE interview repo
 
-Note: to interviewer - copy the following text below and send as part of the email
+## Instructions
 
 - Please [fork](https://github.com/Smartwyre/sre-interview-test/fork) the following repo or use the zip file attached
 - Each folder will have it's own instructions on what you need to do achieve.
