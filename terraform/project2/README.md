@@ -12,4 +12,7 @@ Can you think of a way for us to rename the resource to "dev" without having to 
 
 ## Solution
 
-- Update this README.md with the instructions to solve the problem
+- Update the project
+- Add any command line instructions to this README.md
+
+Important: do not reference the command documentation, we want to see actual usage and referencing our resources i.e. if you need to use the "plan" command we would expect "terraform plan" not a link to https://www.terraform.io/cli/commands/plan
